@@ -1,1 +1,31 @@
-<h2>Best deals</h2>
+<h3>Hey there Avo lover</h3>
+
+<p>Here is our top 5 Avo deals that we yhave picked just for you</p>
+
+
+<li>{{topFive}}</li>
+
+
+
+
+<p>To add an Avo please click on the Add Avo below</p>
+<a href="/add">Add Avo</a>
+<br>
+
+<p>To add a Store please click on the Add Shop below</p>
+<a href="/createshop">Add Shop</a>
+
+<br><br>
+
+<h2>List of Shops</h2>
+<table>
+	<tr>
+		<th>Shop name</th>
+		
+	</tr>
+	{{#each list}}
+	<tr>
+		<td>{{name}}</td>
+	</tr>
+	{{/each}}
+</table>

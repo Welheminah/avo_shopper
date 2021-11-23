@@ -10,3 +10,5 @@ create table avo_deal (
 	shop_id int,
 	foreign key (shop_id) references shop(id)
 );
+
+insert into shop(name) values('Woolworths');

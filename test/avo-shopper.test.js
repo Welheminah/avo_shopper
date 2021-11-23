@@ -22,7 +22,8 @@ describe('The avo shopper', function () {
         const avoShopper = AvoShopper(pool);
 
 		await avoShopper.createShop('Veggie Tales');
-		const shops = await await avoShopper.listShops();
+        const shops = await await avoShopper.listShops();
+        console.log(shops)
 
         assert.equal('Veggie Tales', shops[0].name);
     });
@@ -38,7 +39,9 @@ describe('The avo shopper', function () {
 		await avoShopper.createShop('Veggie Lovers');
 		await avoShopper.createShop('Corner Veggies');
 
-		const shops = await avoShopper.listShops();
+        const shops = await avoShopper.listShops();
+        
+        console.log(shops)
         assert.deepStrictEqual(3, shops.length);
 
     });
@@ -47,7 +50,8 @@ describe('The avo shopper', function () {
 
         const avoShopper = AvoShopper(pool);
 
-		const shopId = await avoShopper.createShop('Veggie Tales');
+        const shopId = await avoShopper.createShop('Veggie Tales');
+        console.log(shopId)
 		await avoShopper.createDeal(shopId, 5, 28);
 
         // assert.deepStrictEqual([], taxiTrips.findTaxisForRegion('Durban'));
@@ -86,6 +90,7 @@ describe('The avo shopper', function () {
 
 		const topFiveDeals = await avoShopper.topFiveDeals();
 
+        console.log(topFiveDeals)
 		assert.equal(5, topFiveDeals.length);
 
         const expectedDeals = [

@@ -1,10 +1,57 @@
+/* $font-primary: Thaoma;
+$font-title: Abril Fatface;
+$font-secondary: Roboto; */
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/* font-family: 'Courgette', cursive; */
 body {
-	background-color: lightseagreen;
+	background-color: black;
 	color: whitesmoke;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Courgette', cursive;
+	align-items: center;
 }
 
 .container{
 	margin: auto;
 	width: 80%;
+	font-family: 'Courgette', cursive;
+	align-items: center;
+}
+.m-1 {
+	margin: 1em;
+}
+
+.mt-1 {
+	margin-top: 1em;
+}
+
+.mb-1 {
+	margin-bottom: 1em;
+}
+
+.p-1 {
+	padding: 1em;
+}
+
+.p-05 {
+	padding: 0.5em;
+}
+
+.w-7 {
+	width: 7em;
+	display: inline-block	;
+}
+
+.w-3 {
+	width: 3em;
+}
+
+table {
+	border-collapse: collapse;
+}
+  
+td, th {
+border: 1px solid #999;
+padding: 0.5rem;
+text-align: left;
 }
