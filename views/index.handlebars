@@ -2,8 +2,20 @@
 
 <p>Here is our top 5 Avo deals that we yhave picked just for you</p>
 
-
-<li>{{topFive}}</li>
+	<table>
+		<tr>
+			<th>Shop Name</th>
+			<th>Price</th>
+			<th>Qty</th>
+		</tr>
+		{{#each topFive}}
+		<tr>
+			<td>{{shop_name}}</td>
+			<td>R{{price}}</td>
+			<td>{{qty}}</td>
+		</tr>
+		{{/each}}
+	</table>
 
 
 

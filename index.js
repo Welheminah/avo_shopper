@@ -30,6 +30,7 @@ let avoShopper = AvoShopper(pool);
 
 app.get('/',async function(req, res) {
 	const topFive =await avoShopper.topFiveDeals();
+	console.log(topFive)
 	const list = await avoShopper.listShops();
 	res.render('index', {topFive,
 		list
@@ -39,21 +40,25 @@ app.get('/',async function(req, res) {
 
 app.get('/add',async function(req, res) {
 	const listOfShops = await avoShopper.listShops();
-	const shpId = req.params.id;
-	const theId = await avoShopper.dealsForShop(shpId)
-	console.log(theId)
+	// const shpId = req.params.id;
+	// const theId = await avoShopper.dealsForShop(shpId)
+	// console.log(theId)
 	const price = req.body.price;
 	const qty = req.body.qty;
-	res.render('add', {listOfShops,
-		theId});
+
+	res.render('add', {listOfShops});
 });
 
 
 app.post('/add', async function(req, res){
-	// const shpId = req.params.id;
-	const price = req.body.price;
+	const shpId = req.body.shop_name;
+	// console.log(req.body);
 	const qty = req.body.qty;
-	await avoShopper.createDeal(price, qty)
+	const price = req.body.price;
+	const listOfShops = await avoShopper.listShops();
+
+	
+	await avoShopper.createDeal(shpId, qty, price)
 
 	res.redirect("/add")
 }) 

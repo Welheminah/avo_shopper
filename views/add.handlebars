@@ -6,24 +6,26 @@
 
 	<div class="m1">
 		{{!-- <label for="qty" class="w-7" ></label> --}}
-		<select name="fruit_id" class="mt-1 p-1" id="">
+		<select name="shop_id" class="mt-1 p-1" id="">
 			<option value="">Select the store</option>
 			{{#each listOfShops}}
-				<option value="{{id}}">{{name}}</option>
-			{{/each}}
+{				<option name="shopWithId" value="{{id}}">{{name}}</option>
+}			{{/each}}
 		</select>
 	</div>
 
-    	<div class="m1">
-		<label for="price" class="w-7">Price</label>
-		<input type="number" name="price" class="w-3 mt-1 p-1">
-	</div>
+    	
 
 	<div class="m1">
 		<label for="qty" class="w-7">Quantity</label>
 		<input type="number" name="qty" class="w-3 mt-1 p-1">
 	</div>
 
+<div class="m1">
+		<label for="price" class="w-7">Price</label>
+		<input type="number" name="price" class="w-3 mt-1 p-1">
+	</div>
+	
 	<div class="m1">
 		<input type="submit" class="mt-1 p-1">
 	</div>
