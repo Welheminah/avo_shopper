@@ -11,6 +11,12 @@ app.use(express.urlencoded({ extended: false }));
 // enable the static folder...
 app.use(express.static('public'));
 
+const connectionString = process.env.DATABASE_URL || 'postgresql://wecode:pg123@localhost:5432/avo_shopper';
+
+const pool = new Pool({
+    connectionString
+});
+
 // add more middleware to allow for templating support
 
 app.engine('handlebars', exphbs.engine());
