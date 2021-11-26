@@ -14,11 +14,19 @@ app.use(express.urlencoded({ extended: false }));
 
 // enable the static folder...
 app.use(express.static('public'));
+let useSSL = false;
+let local = process.env.LOCAL || false;
+if (process.env.DATABASE_URL && !local) {
+    useSSL = true;
+}
 
 const connectionString = process.env.DATABASE_URL || 'postgresql://wecode:pg123@localhost:5432/avo_shopper';
 
 const pool = new Pool({
-    connectionString
+    connectionString,
+    ssl: {
+        rejectUnauthorized: false
+    }
 });
 
 // add more middleware to allow for templating support

@@ -5,7 +5,7 @@ $font-secondary: Roboto; */
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 /* font-family: 'Courgette', cursive; */
 body {
-	background-color: black;
+	background-color: lightgreen;
 	color: whitesmoke;
 	font-family: 'Courgette', cursive;
 	align-items: center;
